@@ -8,7 +8,7 @@ exports.transformProducts = (productsGetted, imagesGetted) => {
         name: product.name,
         color: product.color.id,
         price: `${product.price.amount}${product.price.symbol}`,
-        images: [...imagesGetted[product.sku]],
+        image: imagesGetted[product.sku][0].src,
       };
 
       transformer.push(partialProduct);

@@ -11,7 +11,7 @@ exports.getProducts = async (_, res) => {
       ok: false,
       error: {
         title: products.title,
-        message: `There was an error while fetching products: ${products.message}`,
+        message: products.message,
       },
     });
   }
@@ -20,8 +20,8 @@ exports.getProducts = async (_, res) => {
     return res.status(500).send({
       ok: false,
       error: {
-        title: imnages.title,
-        message: `There was an error while fetching images: ${images.message}`,
+        title: images.title,
+        message: images.message,
       },
     });
   }
