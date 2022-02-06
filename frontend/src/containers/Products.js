@@ -34,7 +34,7 @@ const Products = () => {
   ) : (
     products.map((product, index) => (
       <Product
-        key={`${product.name}-${product.index}`}
+        key={`${product.name}-${index}`}
         image={product.image}
         name={product.name}
         color={product.color}
