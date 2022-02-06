@@ -30,7 +30,7 @@ const Products = () => {
   }, []);
 
   const productsResult = error ? (
-    <p>{error}</p>
+    <p style={{ color: 'red' }}>{error}</p>
   ) : (
     products.map((product, index) => (
       <Product
